@@ -40,6 +40,11 @@ public class PrefUtils {
 				Context.MODE_PRIVATE);
 		sp.edit().putInt(key, value).commit();
 	}
+	public static void setString(Context ctx, String key, String value) {
+		SharedPreferences sp = ctx.getSharedPreferences("config",
+				Context.MODE_PRIVATE);
+		sp.edit().putString(key, value).commit();
+	}
 
 	public static int getInt(String key, int defValue, Context ctx) {
 		SharedPreferences sp = ctx.getSharedPreferences("config",
